@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pantalla de Carga</title>
+  <style>
+    /* Estilos para la pantalla de carga */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("https://i.pinimg.com/originals/3b/47/61/3b476103f78dd726255b5d15c2bb1eb4.jpg");
+      background-size: cover;
+      /* Para cubrir todo el fondo */
+      /* También puedes ajustar otras propiedades CSS según sea necesario */
+    }
+
+    .loader-container {
+      width: 90%;
+      /* Ancho del contenido en relación al ancho de la ventana */
+      max-width: 800px;
+      /* Ancho máximo del contenido */
+      margin: 0 auto;
+      /* Centrar el contenido en la página */
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  </style>
+  </head>
+
+  <body>
+    <!-- Pantalla de carga -->
+    <div class="loader-container">
+      <div class="loader"></div>
+    </div>
+
+    <!-- JavaScript para la redirección después de la carga -->
+    <script>
+      // Función para redirigir después de la carga
+      function redirectToNextInterface() {
+        // Redirige a la siguiente interfaz después de completar la carga
+        window.location.href = "https://b9f0f025-e3b6-42b1-a80d-5cce34abdfd8-00-19xndijji3l35.janeway.replit.dev/"; // Reemplaza "URL_DE_TU_SIGUIENTE_INTERFAZ" con el enlace de tu siguiente interfaz
+      }
+
+      // Llama a la función de redirección después de que la ventana se haya cargado completamente
+      window.onload = function () {
+        // Simula la carga (llena la barra de progreso gradualmente)
+        var loader = document.querySelector('.loader');
+        loader.style.width = '100%';
+        // Después de un breve retraso, redirige a la siguiente interfaz
+        setTimeout(redirectToNextInterface, 2400); // Ajusta este valor si deseas que la redirección ocurra en un tiempo diferente
+      };
+    </script>
+  </body>
+
+</html>

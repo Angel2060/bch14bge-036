@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario</title>
+</head>
+<body style="background-image: url('https://i.pinimg.com/originals/2c/4d/32/2c4d326be1b10902a1ee03feeea3aed1.gif'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+  <h1>Registro de Usuario</h1>
+
+  <!-- Formulario de Registro -->
+  <form id="registroForm" onsubmit="guardarDatosUsuario(); return false;">
+    <label for="nombre">Nombre Completo:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="grado">Grado:</label><br>
+    <input type="text" id="grado" name="grado" required><br><br>
+
+    <label for="grupo">Grupo:</label><br>
+    <input type="text" id="grupo" name="grupo" required><br><br>
+
+    <label for="escuela">Nombre de la Escuela:</label><br>
+    <input type="text" id="escuela" name="escuela" required><br><br>
+
+    <!-- Botón de Envío -->
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <script>
+    // Función para guardar los datos del usuario en localStorage por un tiempo limitado
+    function guardarDatosUsuario() {
+      var datosUsuario = {
+        nombre: document.getElementById('nombre').value,
+        grado: document.getElementById('grado').value,
+        grupo: document.getElementById('grupo').value,
+        escuela: document.getElementById('escuela').value
+      };
+
+      // Convertir los datos del usuario a cadena JSON
+      var datosUsuarioJSON = JSON.stringify(datosUsuario);
+
+      // Guardar los datos del usuario en localStorage con una clave única (p. ej., su nombre)
+      // Esto sobrescribirá cualquier información anterior del mismo usuario
+      localStorage.setItem(datosUsuario.nombre, datosUsuarioJSON);
+
+      // Redirigir a la otra interfaz después de registrar
+      window.location.href = 'https://e3921de0-e985-432b-b037-37f324118f12-00-or9l13tr7tvp.janeway.replit.dev/';
+    }
+  </script>
+</body>
+</html>
